@@ -52,7 +52,7 @@ void render() {
   for (int i = 0; i < length; i++) {
     m.setDot(snake[i][0], snake[i][1], true);
   }
-  m.setDot(food[0], food[1], true);
+  m.setDot(food  [0], food[1], true);
 }
 
 void clearScreen() {
@@ -70,7 +70,7 @@ void clearScreen() {
 bool advance() {
   int head[2] = {snake[0][0] + v[0], snake[0][1] + v[1]};
 
-  if (head[0] < 0 || head[0] >= SIZE) {
+  if (head[0] < 0 || head[0] >= SIZE*2) {
 
             delay(1000);
     showGameOverMessage();
